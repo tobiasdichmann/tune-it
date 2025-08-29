@@ -1,0 +1,185 @@
+#book {
+  #bookSection {
+    padding: 100px 150px;
+
+    .book-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 100px;
+
+      img {
+        width: 100%;
+        align-self: center;
+      }
+
+      .book-txt {
+        align-self: center;
+
+        h3 {
+          padding-bottom: 10px;
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+
+          a {
+            color: black;
+
+            &:hover {
+              color: lightgray;
+            }
+          }
+        }
+      }
+    }
+
+    .prices {
+      margin-top: 50px;
+
+      display: grid;
+
+      h3 {
+        padding-bottom: 10px;
+        font-size: 2rem;
+      }
+
+      div {
+        display: flex;
+        gap: 40px;
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #book {
+    #bookSection {
+      padding: 100px;
+
+      .book-content {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #book {
+    #bookSection {
+      .book-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+
+        img {
+          grid-row: 2/-1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #book {
+    #bookSection {
+      .book-content {
+        .book-txt {
+          p {
+            a {
+              &:hover {
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #book {
+    #bookSection {
+      padding: 100px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #book {
+    #bookSection {
+      padding: 50px 10px;
+      text-align: center;
+
+      .book-content {
+        .book-txt {
+          h3 {
+            font-size: 1.7rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .prices {
+        h3 {
+          font-size: 1.7rem;
+        }
+
+        div {
+          text-align: right;
+          justify-content: center;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #book {
+    #bookSection {
+      .book-content {
+        img {
+          position: relative;
+          bottom: 20px;
+        }
+
+        .book-txt {
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .prices {
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        table {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+#singers {
+  #singersSection {
+    padding: 100px 0;
+
+    display: grid;
+
+    .sopraner-content,
+    .alter-content,
+    .tenorer-content,
+    .basser-content {
+      margin-bottom: 100px;
+
+      h3 {
+        padding-bottom: 20px;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .singer-profiles {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        gap: 100px;
+
+        .singer-profile {
+          h4 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          img {
+            height: 400px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .tenorer-basser-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      gap: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #singers {
+    text-align: center;
+
+    #singersSection {
+      padding: 50px 10px;
+
+      .sopraner-content,
+      .alter-content,
+      .tenorer-content,
+      .basser-content {
+        h3 {
+          font-size: 1.7rem;
+        }
+
+        .singer-profiles {
+          .singer-profile {
+            h4 {
+              font-size: 1.2rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .tenorer-basser-content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #singers {
+    #singersSection {
+      .sopraner-content,
+      .alter-content,
+      .tenorer-content,
+      .basser-content {
+        .singer-profiles {
+          .singer-profile {
+            img {
+              height: 350px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #singers {
+    #singersSection {
+      .sopraner-content,
+      .alter-content,
+      .tenorer-content,
+      .basser-content {
+        .singer-profiles {
+          .singer-profile {
+            img {
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

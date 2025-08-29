@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+.scroll-to-top {
+  padding: 15px;
+  color: white;
+  background-color: black;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #555;
+  }
+}
+
+button {
+  padding: 5px 10px;
+  color: black;
+  background-color: white;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .scroll-to-top {
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-to-top {
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,238 @@
+#home {
+  #homeAboutSection {
+    padding: 100px 150px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 100px;
+
+    .home-about-content {
+      align-self: center;
+
+      p {
+        padding-bottom: 20px;
+        font-size: 1.5rem;
+      }
+    }
+
+    img {
+      width: 100%;
+
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  #quote {
+    padding: 0 150px;
+    text-align: center;
+
+    p {
+      q {
+        font-size: 1.5rem;
+      }
+
+      i {
+        padding-top: 10px;
+        font-size: 1.3rem;
+
+        display: block;
+      }
+    }
+  }
+
+  #homeBookSongsSection {
+    padding: 100px 150px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 100px;
+
+    .home-book-content {
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        padding: 20px 0;
+        font-size: 1.5rem;
+      }
+    }
+
+    .home-songs-section {
+      justify-self: center;
+
+      h3 {
+        padding-bottom: 20px;
+        font-size: 2rem;
+        line-height: 28px;
+
+        i {
+          font-size: 1.5rem;
+
+          span {
+            position: relative;
+            left: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #home {
+    #homeAboutSection {
+      padding: 100px;
+
+      gap: 50px;
+    }
+
+    #quote {
+      padding: 0 100px;
+    }
+
+    #homeBookSongsSection {
+      padding: 100px;
+
+      gap: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #home {
+    #homeAboutSection {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #home {
+    #homeBookSongsSection {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+
+      .home-songs-section {
+        justify-self: start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home {
+    #homeAboutSection {
+      padding: 50px 10px;
+      text-align: center;
+
+      .home-about-content {
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    #quote {
+      padding: 0 10px;
+
+      p {
+        q {
+          font-size: 1.2rem;
+        }
+
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    #homeBookSongsSection {
+      padding: 50px 20px;
+      text-align: center;
+
+      .home-book-content {
+        h3 {
+          font-size: 1.7rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+
+      .home-songs-section {
+        justify-self: normal;
+
+        h3 {
+          font-size: 1.7rem;
+          line-height: 22px;
+
+          i {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #home {
+    #homeAboutSection {
+      .home-about-content {
+        p {
+          padding-bottom: 10px;
+          font-size: 1rem;
+        }
+      }
+
+      img {
+        position: relative;
+        bottom: 20px;
+      }
+    }
+
+    #quote {
+      padding: 0 10px;
+
+      p {
+        q {
+          font-size: 1rem;
+        }
+
+        i {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    #homeBookSongsSection {
+      .home-book-content {
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          padding-bottom: 10px;
+          font-size: 1rem;
+        }
+      }
+
+      .home-songs-section {
+        h3 {
+          padding-bottom: 10px;
+          font-size: 1.5rem;
+
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

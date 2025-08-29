@@ -1,0 +1,340 @@
+header {
+  display: grid;
+
+  .banner {
+    max-height: 100vh;
+    width: 100%;
+    object-fit: cover;
+
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+
+  nav {
+    height: fit-content;
+    padding: 10px 20px;
+    z-index: 1;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+
+    .logo {
+      width: 300px;
+    }
+
+    ul {
+      display: flex;
+      gap: 40px;
+
+      li {
+        font-size: 1.8rem;
+        list-style: none;
+
+        a {
+          color: white;
+          text-decoration: none;
+          transition-duration: 0.3s;
+
+          &:hover,
+          &.active {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .burger-icon {
+      display: none;
+    }
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  @keyframes arrow-jump {
+    0% {
+      bottom: 50px;
+    }
+    50% {
+      bottom: 80px;
+    }
+    100% {
+      bottom: 50px;
+    }
+  }
+
+  .arrow-down {
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    bottom: 40px;
+    transition-duration: 0.3s;
+    animation: arrow-jump 1.2s ease-in-out infinite;
+
+    justify-self: center;
+    align-self: end;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  .socials {
+    margin: 0 40px 40px 0;
+    z-index: 1;
+
+    justify-self: end;
+    align-self: end;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+
+    a {
+      color: white;
+      font-size: 3rem;
+      transition-duration: 0.3s;
+
+      &:nth-of-type(2) {
+        /* Facebook icon */
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    nav {
+      .logo {
+        width: 250px;
+      }
+
+      ul {
+        display: none;
+      }
+
+      .burger-icon {
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        transition-duration: 0.3s;
+
+        display: block;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    @keyframes burger-menu-show {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .burger-menu.active {
+      height: 100vh;
+      width: 100vw;
+      background-color: white;
+      position: fixed;
+      z-index: 2;
+      text-transform: uppercase;
+      animation: burger-menu-show 0.3s;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .cross-icon {
+        color: black;
+        font-size: 2rem;
+        cursor: pointer;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+
+        &:hover {
+          color: gray;
+        }
+      }
+
+      ul {
+        text-align: center;
+
+        @keyframes burger-list-show {
+          from {
+            position: relative;
+            top: 20px;
+          }
+          to {
+            position: relative;
+            top: 0;
+          }
+        }
+
+        li {
+          line-height: 50px;
+          list-style: none;
+          animation: burger-list-show 0.5s;
+
+          a {
+            color: black;
+            font-size: 2rem;
+            text-align: right;
+            text-decoration: none;
+            transition-duration: 0.3s;
+
+            &:hover,
+            &.active {
+              color: gray;
+            }
+          }
+        }
+      }
+
+      @keyframes burger-socials-show {
+        from {
+          top: 100px;
+        }
+        to {
+          top: 0;
+        }
+      }
+
+      .burger-socials {
+        margin-top: 20px;
+        text-align: center;
+        position: relative;
+        animation: burger-socials-show 0.5s;
+
+        a {
+          color: black;
+          font-size: 1.7rem;
+          transition-duration: 0.3s;
+
+          &:nth-of-type(2) {
+            /* Facebook icon */
+            margin-left: 10px;
+          }
+
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+
+    .arrow-down {
+      display: none;
+    }
+
+    .socials {
+      a {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    nav {
+      .burger-icon {
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .burger-menu.active {
+      .cross-icon {
+        &:hover {
+          color: black;
+        }
+      }
+
+      ul {
+        li {
+          a {
+            &.active {
+              color: gray;
+            }
+
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+
+      .burger-socials {
+        a {
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .arrow-down {
+      &:hover {
+        color: white;
+      }
+    }
+
+    .socials {
+      a {
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    nav {
+      padding: 10px;
+
+      .logo {
+        width: 180px;
+      }
+
+      .burger-icon {
+        font-size: 1.8rem;
+      }
+    }
+
+    .burger-menu.active {
+      .cross-icon {
+        font-size: 1.8rem;
+        top: 25px;
+        right: 10px;
+      }
+    }
+
+    .socials {
+      margin: 0 10px 10px 0;
+
+      a {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
