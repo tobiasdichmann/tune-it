@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "../../styles/singers.scss";
-import { NavLink } from "react-router-dom";
+
 
 // IMAGES
-import NavbarLogo from "../../assets/img/logo/logo_bg-grey_transparent.png";
 import SingersBanner from "../../assets/img/ordinary/ordinary_stole.jpg";
 //-------
 import Vibeke from "../../assets/img/profiles/vibeke.png";
@@ -24,8 +23,6 @@ import {
   FaInstagram,
   FaFacebookF,
 } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { CgClose } from "react-icons/cg";
 
 const Singers = () => {
   /* Scroll To Top Button */
@@ -48,17 +45,9 @@ const Singers = () => {
 
   window.addEventListener("scroll", toggleVisible);
 
-  /* Burger menu */
-  const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
 
-  /* Scroll to top when button "sends" user to a new page */
-  const btnScroll = () => {
-    window.scrollTo(0, 0);
-  };
+
 
   return (
     <div id="singers">
@@ -74,87 +63,7 @@ const Singers = () => {
       <header>
         <img src={SingersBanner} className="banner" alt="Billede af Tune It" />
 
-        <nav>
-          <NavLink to="/">
-            <img src={NavbarLogo} className="logo" alt="Tune It Logo" />
-          </NavLink>
 
-          <ul>
-            <li>
-              <NavLink to="/">Hjem</NavLink>
-            </li>
-            <li>
-              <NavLink to="/book">Book</NavLink>
-            </li>
-            <li>
-              <NavLink to="/singers">Sangere</NavLink>
-            </li>
-            <li>
-              <NavLink to="/songs">Sange</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">Om</NavLink>
-            </li>
-          </ul>
-
-          <a className="burger-icon" onClick={handleClick}>
-            <GiHamburgerMenu />
-          </a>
-        </nav>
-
-        <div className={`burger-menu ${isActive ? "active" : ""}`}>
-          <a className="cross-icon" onClick={handleClick}>
-            <CgClose />
-          </a>
-
-          <ul>
-            <li>
-              <NavLink to="/" onClick={btnScroll}>
-                Hjem
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/book" onClick={btnScroll}>
-                Book
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/singers" onClick={handleClick}>
-                Sangere
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/songs" onClick={btnScroll}>
-                Sange
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" onClick={btnScroll}>
-                Om
-              </NavLink>
-            </li>
-          </ul>
-
-          <div className="burger-socials">
-            <a
-              href="https://www.instagram.com/tune_it_randers/?hl=da"
-              title="@tune_it_randers"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://www.facebook.com/tuneit?locale=da_DK"
-              title="Tune It"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebookF />
-            </a>
-          </div>
-        </div>
 
         <a href="#singersSection" className="arrow-down">
           <FaArrowDown />

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "../../styles/songs.scss";
 import ReactCompareImage from "react-compare-image";
-import { NavLink } from "react-router-dom";
+
 
 // IMAGES
-import NavbarLogo from "../../assets/img/logo/logo_bg-grey_transparent.png";
 import ImgOne from "../../assets/img/ordinary/ordinary_bagtæppe_slider.jpg";
 import ImgTwo from "../../assets/img/xmas/xmas_bagtæppe_slider.jpg";
 import AudioImgOne from "../../assets/img/ordinary/ordinary_mur_venstre.jpg";
@@ -18,7 +17,7 @@ import TWFC from "../../assets/audio/the_world_for_christmas.mp3";
 import ISMKSC from "../../assets/audio/i_saw_mommy_kissing_santa_claus.mp3";
 import TCS from "../../assets/audio/the_christmas_song.mp3";
 
-// ICONS15z
+// ICONS
 import {
   FaArrowUp,
   FaArrowDown,
@@ -26,8 +25,6 @@ import {
   FaFacebookF,
   FaMusic,
 } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { CgClose } from "react-icons/cg";
 
 const Songs = () => {
   /* Scroll To Top Button */
@@ -50,17 +47,9 @@ const Songs = () => {
 
   window.addEventListener("scroll", toggleVisible);
 
-  /* Burger menu */
-  const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
 
-  /* Scroll to top when button "sends" user to a new page */
-  const btnScroll = () => {
-    window.scrollTo(0, 0);
-  };
+
 
   /* Pausing all other audio elements on a site if you click on a play button, except the one selected */
   document.addEventListener(
@@ -68,7 +57,7 @@ const Songs = () => {
     function (e) {
       var audios = document.getElementsByTagName("audio");
       for (var i = 0, len = audios.length; i < len; i++) {
-        if (audios[i] != e.target) {
+        if (audios[i] !== e.target) {
           audios[i].pause();
         }
       }
@@ -92,87 +81,7 @@ const Songs = () => {
           <ReactCompareImage leftImage={ImgOne} rightImage={ImgTwo} />
         </div>
 
-        <nav>
-          <NavLink to="/">
-            <img src={NavbarLogo} className="logo" alt="Tune It Logo" />
-          </NavLink>
 
-          <ul>
-            <li>
-              <NavLink to="/">Hjem</NavLink>
-            </li>
-            <li>
-              <NavLink to="/book">Book</NavLink>
-            </li>
-            <li>
-              <NavLink to="/singers">Sangere</NavLink>
-            </li>
-            <li>
-              <NavLink to="/songs">Sange</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">Om</NavLink>
-            </li>
-          </ul>
-
-          <a className="burger-icon" onClick={handleClick}>
-            <GiHamburgerMenu />
-          </a>
-        </nav>
-
-        <div className={`burger-menu ${isActive ? "active" : ""}`}>
-          <a className="cross-icon" onClick={handleClick}>
-            <CgClose />
-          </a>
-
-          <ul>
-            <li>
-              <NavLink to="/" onClick={btnScroll}>
-                Hjem
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/book" onClick={btnScroll}>
-                Book
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/singers" onClick={btnScroll}>
-                Sangere
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/songs" onClick={handleClick}>
-                Sange
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" onClick={btnScroll}>
-                Om
-              </NavLink>
-            </li>
-          </ul>
-
-          <div className="burger-socials">
-            <a
-              href="https://www.instagram.com/tune_it_randers/?hl=da"
-              title="@tune_it_randers"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://www.facebook.com/tuneit?locale=da_DK"
-              title="Tune It"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebookF />
-            </a>
-          </div>
-        </div>
 
         <a href="#songsLists" className="arrow-down">
           <FaArrowDown />

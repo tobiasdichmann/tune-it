@@ -12,11 +12,13 @@ import Songs from "./components/pages/Songs";
 import About from "./components/pages/About";
 
 // COMPONENTS
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route index element={<Home />} />
         <Route path="/book" element={<Book />} />
