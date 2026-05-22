@@ -1,3 +1,5 @@
+@import './variables/colors';
+
 #songs {
   #songsLists {
     padding: 100px 150px;
@@ -41,14 +43,14 @@
       }
 
       .ordinary-list {
-        background-color: #1d3841;
-        border: 5px solid #91190e;
+        background-color: $color-teal-dark;
+        border: 5px solid $color-red-dark;
         border-right: none;
       }
 
       .xmas-list {
-        background-color: #91190e;
-        border: 5px solid #1d3841;
+        background-color: $color-red-dark;
+        border: 5px solid $color-teal-dark;
         border-left: none;
       }
     }
@@ -152,12 +154,12 @@
         }
 
         .ordinary-list {
-          border: 5px solid #91190e;
+          border: 5px solid $color-red-dark;
           border-bottom: none;
         }
 
         .xmas-list {
-          border: 5px solid #1d3841;
+          border: 5px solid $color-teal-dark;
           border-top: none;
         }
       }

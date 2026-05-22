@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import NavbarLogo from "../assets/img/logo/logo_bg-grey_transparent.png";
 import "../styles/navbar.scss";
 
 // ICONS
@@ -25,14 +24,14 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <NavLink to="/" onClick={handleLinkClick}>
-          <img src={NavbarLogo} className="logo" alt="Tune It Logo" />
+        <NavLink to="/" onClick={handleLinkClick} className="logo-link">
+          <span className="logo-text">Tune It</span>
         </NavLink>
 
         <ul>
           <li>
             <NavLink to="/" onClick={handleLinkClick}>
-              Hjem
+              Home
             </NavLink>
           </li>
           <li>
@@ -42,17 +41,17 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/singers" onClick={handleLinkClick}>
-              Sangere
+              Singers
             </NavLink>
           </li>
           <li>
             <NavLink to="/songs" onClick={handleLinkClick}>
-              Sange
+              Songs
             </NavLink>
           </li>
           <li>
             <NavLink to="/about" onClick={handleLinkClick}>
-              Om
+              About
             </NavLink>
           </li>
         </ul>
@@ -70,7 +69,7 @@ const Navbar = () => {
         <ul>
           <li>
             <NavLink to="/" onClick={handleLinkClick}>
-              Hjem
+              Home
             </NavLink>
           </li>
           <li>
@@ -80,17 +79,17 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/singers" onClick={handleLinkClick}>
-              Sangere
+              Singers
             </NavLink>
           </li>
           <li>
             <NavLink to="/songs" onClick={handleLinkClick}>
-              Sange
+              Songs
             </NavLink>
           </li>
           <li>
             <NavLink to="/about" onClick={handleLinkClick}>
-              Om
+              About
             </NavLink>
           </li>
         </ul>

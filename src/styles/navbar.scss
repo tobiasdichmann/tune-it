@@ -1,39 +1,59 @@
+@import './variables/fonts';
+@import './variables/colors';
+
+// Override default app fonts globally
+* {
+  font-family: $font-primary;
+}
+
 nav {
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: $color-navy; // Solid dark blue background matching about section
   width: 100%;
   box-sizing: border-box;
 
-  height: fit-content;
-  padding: 10px 20px;
+  height: 8vh; // Explicit navbar height
+  padding: 0 80px;
   z-index: 10;
-  text-transform: uppercase;
+  text-transform: none;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .logo {
-    width: 300px;
+  .logo-link {
+    text-decoration: none;
+
+    .logo-text {
+      font-family: $font-serif;
+      font-weight: 700;
+      font-size: 2.6rem;
+      color: $color-cream; // Premium off-white
+      letter-spacing: 0.5px;
+    }
   }
 
   ul {
     display: flex;
     gap: 40px;
+    margin: 0;
+    padding: 0;
 
     li {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       list-style: none;
 
       a {
-        color: white;
+        font-family: $font-serif;
+        color: $color-cream;
         text-decoration: none;
-        transition-duration: 0.3s;
+        transition: all 0.3s ease;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
 
         &:hover,
         &.active {
-          color: black;
+          color: $color-cream;
+          border-bottom: 2px solid $color-cream; // Elegant underline
         }
       }
     }
@@ -50,8 +70,13 @@ nav {
 
 @media screen and (max-width: 1100px) {
   nav {
-    .logo {
-      width: 250px;
+    height: 80px;
+    padding: 0 40px;
+
+    .logo-link {
+      .logo-text {
+        font-size: 2.2rem;
+      }
     }
 
     ul {
@@ -59,15 +84,14 @@ nav {
     }
 
     .burger-icon {
-      color: white;
+      color: $color-cream;
       font-size: 2rem;
       cursor: pointer;
       transition-duration: 0.3s;
-
       display: block;
 
       &:hover {
-        color: black;
+        color: $color-gold;
       }
     }
   }
@@ -76,6 +100,7 @@ nav {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -84,130 +109,71 @@ nav {
   .burger-menu.active {
     height: 100vh;
     width: 100vw;
-    background-color: white;
+    background-color: $color-navy; // Deep dark blue
     position: fixed;
-    z-index: 2;
-    text-transform: uppercase;
-    animation: burger-menu-show 0.3s;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    text-transform: none;
+    animation: burger-menu-show 0.3s ease-in-out;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     .cross-icon {
-      color: black;
+      color: $color-cream;
       font-size: 2rem;
       cursor: pointer;
       position: fixed;
       top: 30px;
-      right: 20px;
+      right: 40px;
 
       &:hover {
-        color: gray;
+        color: $color-gold;
       }
     }
 
     ul {
       text-align: center;
-
-      @keyframes burger-list-show {
-        from {
-          position: relative;
-          top: 20px;
-        }
-        to {
-          position: relative;
-          top: 0;
-        }
-      }
+      padding: 0;
+      margin: 0;
 
       li {
-        line-height: 50px;
+        line-height: 60px;
         list-style: none;
-        animation: burger-list-show 0.5s;
 
         a {
-          color: black;
-          font-size: 2rem;
-          text-align: right;
+          font-family: $font-serif;
+          color: $color-cream;
+          font-size: 2.2rem;
+          text-align: center;
           text-decoration: none;
-          transition-duration: 0.3s;
+          transition: all 0.3s ease;
+          border-bottom: 2px solid transparent;
+          padding-bottom: 4px;
 
           &:hover,
           &.active {
-            color: gray;
+            color: $color-gold;
+            border-bottom: 2px solid $color-gold;
           }
         }
       }
     }
 
-    @keyframes burger-socials-show {
-      from {
-        top: 100px;
-      }
-      to {
-        top: 0;
-      }
-    }
-
     .burger-socials {
-      margin-top: 20px;
+      margin-top: 40px;
       text-align: center;
-      position: relative;
-      animation: burger-socials-show 0.5s;
 
       a {
-        color: black;
-        font-size: 1.7rem;
+        color: $color-cream;
+        font-size: 2rem;
         transition-duration: 0.3s;
-
-        &:nth-of-type(2) {
-          /* Facebook icon */
-          margin-left: 10px;
-        }
+        margin: 0 15px;
 
         &:hover {
-          color: gray;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 850px) {
-  nav {
-    .burger-icon {
-      &:hover {
-        color: white;
-      }
-    }
-  }
-
-  .burger-menu.active {
-    .cross-icon {
-      &:hover {
-        color: black;
-      }
-    }
-
-    ul {
-      li {
-        a {
-          &.active {
-            color: gray;
-          }
-
-          &:hover {
-            color: black;
-          }
-        }
-      }
-    }
-
-    .burger-socials {
-      a {
-        &:hover {
-          color: black;
+          color: $color-gold;
         }
       }
     }
@@ -216,10 +182,13 @@ nav {
 
 @media screen and (max-width: 600px) {
   nav {
-    padding: 10px;
+    height: 70px;
+    padding: 0 20px;
 
-    .logo {
-      width: 180px;
+    .logo-link {
+      .logo-text {
+        font-size: 2rem;
+      }
     }
 
     .burger-icon {
@@ -231,7 +200,18 @@ nav {
     .cross-icon {
       font-size: 1.8rem;
       top: 25px;
-      right: 10px;
+      right: 20px;
+    }
+
+    ul {
+      li {
+        line-height: 50px;
+
+        a {
+          font-family: $font-serif;
+          font-size: 1.8rem;
+        }
+      }
     }
   }
 }
