@@ -58,7 +58,7 @@ const Home = () => {
       <header>
         <img src={HomeBanner} className="banner" alt="Billede af Tune It" />
 
-
+        <h1 className="hero-title">Tune It</h1>
 
         <a href="#homeAboutSection" className="arrow-down">
           <FaArrowDown />

@@ -1,15 +1,50 @@
+@import './variables/fonts';
 @import './variables/colors';
 
 header {
   display: grid;
+  position: relative;
+  height: calc(100vh - 8vh);
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    background-color: rgba($color-navy, 0.40);
+    z-index: 0;
+    pointer-events: none;
+  }
 
   .banner {
+    height: 92vh;
     max-height: 100vh;
     width: 100%;
     object-fit: cover;
+    display: block;
 
     grid-column: 1/-1;
     grid-row: 1/-1;
+  }
+
+  .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    z-index: 1;
+
+    font-family: $font-serif;
+    font-weight: 700;
+    font-size: 7rem;
+    color: $color-cream;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
   }
 
   @keyframes arrow-jump {
@@ -33,6 +68,7 @@ header {
     bottom: 40px;
     transition-duration: 0.3s;
     animation: arrow-jump 1.2s ease-in-out infinite;
+    z-index: 1;
 
     justify-self: center;
     align-self: end;
@@ -72,13 +108,41 @@ header {
 
 @media screen and (max-width: 1100px) {
   header {
+    height: calc(100vh - 6.5vh);
+
+    .banner {
+      height: 93.5vh;
+    }
+
+    .hero-title {
+      top: calc(50vh - 80px);
+      font-size: 5rem;
+    }
+
+    @keyframes arrow-jump {
+      0% {
+        bottom: 40px;
+      }
+
+      50% {
+        bottom: 60px;
+      }
+
+      100% {
+        bottom: 40px;
+      }
+    }
+
     .arrow-down {
-      display: none;
+      bottom: 40px;
     }
 
     .socials {
+      margin-right: 40px;
+      right: 40px;
+
       a {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
   }
@@ -105,13 +169,48 @@ header {
 @media screen and (max-width: 600px) {
   header {
     padding: 0;
+    height: calc(100vh - 5.5vh);
+
+    .banner {
+      height: 94.5vh;
+    }
+
+    .hero-title {
+      top: calc(50vh - 5.5vh);
+      font-size: 3.5rem;
+    }
+
+    @keyframes arrow-jump {
+      0% {
+        bottom: 20px;
+      }
+
+      50% {
+        bottom: 40px;
+      }
+
+      100% {
+        bottom: 20px;
+      }
+    }
+
+    .arrow-down {
+      bottom: 20px;
+    }
 
     .socials {
-      margin: 0 10px 10px 0;
+      margin: 0 20px 20px 0;
+      right: 20px;
+      bottom: 20px;
 
       a {
         font-size: 1.8rem;
       }
+    }
+
+    &::after {
+      width: 300px;
+      height: 150px;
     }
   }
 }

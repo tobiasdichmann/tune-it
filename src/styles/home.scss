@@ -28,38 +28,7 @@
     }
   }
 
-  // Hero Section
-  header {
-    position: relative;
-    height: calc(100vh - 8vh);
-    overflow: hidden;
 
-    .banner {
-      height: 92vh;
-      width: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0 20px;
-
-      font-family: $font-serif;
-      font-weight: 700;
-      font-size: 7rem;
-      color: $color-cream;
-      letter-spacing: 2px;
-      text-align: center;
-      text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-      pointer-events: none;
-    }
-  }
 
   // About Section
   #homeAboutSection {
@@ -281,18 +250,7 @@
 
 @media screen and (max-width: 1100px) {
   #home {
-    header {
-      height: calc(100vh - 80px);
 
-      .hero-title {
-        top: calc(50vh - 80px);
-        font-size: 5rem;
-      }
-
-      .socials {
-        right: 40px;
-      }
-    }
 
     #homeAboutSection {
       grid-template-columns: 1fr;
@@ -325,32 +283,7 @@
 
 @media screen and (max-width: 600px) {
   #home {
-    header {
-      height: calc(100vh - 70px);
 
-      .hero-title {
-        top: calc(50vh - 70px);
-        font-size: 3.5rem;
-      }
-
-      .arrow-down {
-        bottom: 20px;
-      }
-
-      .socials {
-        right: 20px;
-        bottom: 20px;
-
-        a {
-          font-size: 1.8rem;
-        }
-      }
-
-      &::after {
-        width: 300px;
-        height: 150px;
-      }
-    }
 
     #homeAboutSection {
       padding: 60px 20px;
