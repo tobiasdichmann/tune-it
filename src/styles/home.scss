@@ -166,8 +166,8 @@
     }
   }
 
-  // Book & Songs Section
-  #homeBookSongsSection {
+  // Book & Repertoire Section
+  #homeBookRepertoireSection {
     background-color: $color-navy;
     padding: 120px 150px;
     display: grid;
@@ -192,7 +192,7 @@
     }
 
     .home-book-content,
-    .home-songs-section {
+    .home-repertoire-section {
       align-self: center;
       z-index: 2;
 
@@ -241,7 +241,7 @@
       padding: 100px 80px;
     }
 
-    #homeBookSongsSection {
+    #homeBookRepertoireSection {
       padding: 100px 80px;
       gap: 60px;
     }
@@ -271,7 +271,7 @@
 
 @media screen and (max-width: 950px) {
   #home {
-    #homeBookSongsSection {
+    #homeBookRepertoireSection {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
       gap: 60px;
@@ -332,11 +332,11 @@
       }
     }
 
-    #homeBookSongsSection {
+    #homeBookRepertoireSection {
       padding: 60px 20px;
 
       .home-book-content,
-      .home-songs-section {
+      .home-repertoire-section {
         h3 {
           font-size: 1.8rem;
 

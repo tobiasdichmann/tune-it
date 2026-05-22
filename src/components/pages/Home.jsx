@@ -120,7 +120,7 @@ const Home = () => {
         </p>
       </section>
 
-      <section id="homeBookSongsSection">
+      <section id="homeBookRepertoireSection">
         <div className="home-book-content">
           <h3>Book os til jeres næste arrangement!</h3>
 
@@ -134,7 +134,7 @@ const Home = () => {
           </NavLink>
         </div>
 
-        <div className="home-songs-section">
+        <div className="home-repertoire-section">
           <h3>
             Vi synger for at have det sjovt <br />
             <i>
@@ -143,7 +143,7 @@ const Home = () => {
             </i>
           </h3>
 
-          <NavLink to="/songs" onClick={btnScroll}>
+          <NavLink to="/repertoire" onClick={btnScroll}>
             <button>Hør os her</button>
           </NavLink>
         </div>

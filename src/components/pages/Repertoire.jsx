@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/songs.scss";
+import "../../styles/repertoire.scss";
 import ReactCompareImage from "react-compare-image";
 
 
@@ -26,7 +26,7 @@ import {
   FaMusic,
 } from "react-icons/fa";
 
-const Songs = () => {
+const Repertoire = () => {
   /* Scroll To Top Button */
   const [visible, setVisible] = useState(false);
 
@@ -66,7 +66,7 @@ const Songs = () => {
   );
 
   return (
-    <div id="songs">
+    <div id="repertoire">
       {/* Scroll-To-Top */}
       <button
         className="scroll-to-top"
@@ -83,7 +83,7 @@ const Songs = () => {
 
 
 
-        <a href="#songsLists" className="arrow-down">
+        <a href="#repertoireLists" className="arrow-down">
           <FaArrowDown />
         </a>
 
@@ -108,10 +108,10 @@ const Songs = () => {
         </div>
       </header>
 
-      <section id="songsLists">
+      <section id="repertoireLists">
         <h3>
           Nuværende Repertoire
-          <a href="#songsAudioClips" className="audio-clips-link">
+          <a href="#repertoireAudioClips" className="audio-clips-link">
             <FaMusic className="node-icon" />
             Hør os her
           </a>
@@ -295,7 +295,7 @@ const Songs = () => {
         </div>
       </section>
 
-      <main id="songsAudioClips">
+      <main id="repertoireAudioClips">
         {/* Ja Da Ja Da Jing Jing Jing / Big Bad World */}
         <div className="audio-container audio-container-one">
           <div className="audio-clips">
@@ -376,4 +376,4 @@ const Songs = () => {
   );
 };
 
-export default Songs;
+export default Repertoire;
