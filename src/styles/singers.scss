@@ -1,74 +1,188 @@
-#singers {
-  #singersSection {
-    padding: 100px 0;
+@import './variables/fonts';
+@import './variables/colors';
 
-    display: grid;
+#singers {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  header {
+    background-color: $color-navy;
+    position: relative;
+
+    .hero-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 20px;
+      z-index: 2;
+
+      font-family: $font-serif;
+      font-weight: 700;
+      font-size: 7rem;
+      color: $color-cream;
+      letter-spacing: 2px;
+      text-align: center;
+      text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+    }
+  }
+
+  #singersSection {
+    background-color: $color-cream;
+    padding: 120px 80px;
+    position: relative;
+    overflow: hidden;
+
+    // Faint diagonal sheet music background on the right side
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      right: -100px;
+      width: 700px;
+      height: 700px;
+      background-image: url('../assets/img/sheet_music_bg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      transform: rotate(15deg);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    // Second faint sheet music background on the left side near the bottom
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 5%;
+      left: -150px;
+      width: 650px;
+      height: 650px;
+      background-image: url('../assets/img/sheet_music_bg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.14;
+      transform: rotate(-10deg);
+      pointer-events: none;
+      z-index: 1;
+    }
 
     .sopraner-content,
     .alter-content,
     .tenorer-content,
     .basser-content {
-      margin-bottom: 100px;
+      margin-bottom: 120px;
+      position: relative;
+      z-index: 2;
 
       h3 {
-        padding-bottom: 20px;
-        font-size: 2rem;
+        font-family: $font-serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $color-navy;
         text-align: center;
+        margin-bottom: 50px;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 2px;
+          background-color: $color-gold;
+          margin: 12px auto 0 auto;
+        }
       }
 
       .singer-profiles {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 80px 150px;
         flex-wrap: wrap;
-
-        gap: 100px;
+        max-width: 1350px;
+        margin: 0 auto;
 
         .singer-profile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 340px;
+
+          // Shift rendering order so image is on top, then name, then role (solving JSX order in CSS)
+          img {
+            order: 1;
+            width: 320px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 2px solid $color-gold;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+
+            &:hover {
+              transform: translateY(-6px);
+              box-shadow: 0 12px 28px rgba(197, 168, 107, 0.25);
+            }
+          }
+
           h4 {
-            font-size: 1.5rem;
+            order: 2;
+            font-family: $font-primary;
+            font-weight: 700;
+            font-size: 1.55rem;
+            color: $color-navy;
+            margin-top: 20px;
+            margin-bottom: 6px;
           }
 
           p {
-            font-size: 1.2rem;
-          }
-
-          img {
-            height: 400px;
-            object-fit: cover;
+            order: 3;
+            font-family: $font-primary;
+            font-size: 1.15rem;
+            color: $color-text-muted;
+            margin: 0;
           }
         }
       }
     }
 
+    // Force Tenorer and Basser sections to stack vertically (instead of side-by-side)
     .tenorer-basser-content {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-
-      gap: 50px;
+      flex-direction: column;
+      gap: 0;
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+// RESPONSIVENESS
+@media screen and (max-width: 1600px) {
   #singers {
-    text-align: center;
-
     #singersSection {
-      padding: 50px 10px;
+      padding: 100px 40px;
 
       .sopraner-content,
       .alter-content,
       .tenorer-content,
       .basser-content {
-        h3 {
-          font-size: 1.7rem;
-        }
-
         .singer-profiles {
+          max-width: 1000px;
+          gap: 50px 40px;
+
           .singer-profile {
+            width: 260px;
+
+            img {
+              width: 240px;
+              height: 300px;
+            }
+
             h4 {
-              font-size: 1.2rem;
+              font-size: 1.3rem;
             }
 
             p {
@@ -77,48 +191,66 @@
           }
         }
       }
-
-      .tenorer-basser-content {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        gap: 50px;
-      }
     }
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 850px) {
   #singers {
+    header {
+      .hero-title {
+        font-size: 5rem;
+      }
+    }
+    
     #singersSection {
+      padding: 80px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #singers {
+    header {
+      .hero-title {
+        font-size: 3.5rem;
+      }
+    }
+
+    #singersSection {
+      padding: 60px 15px;
+
       .sopraner-content,
       .alter-content,
       .tenorer-content,
       .basser-content {
-        .singer-profiles {
-          .singer-profile {
-            img {
-              height: 350px;
-            }
-          }
+        margin-bottom: 80px;
+
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 35px;
         }
-      }
-    }
-  }
-}
 
-@media screen and (max-width: 300px) {
-  #singers {
-    #singersSection {
-      .sopraner-content,
-      .alter-content,
-      .tenorer-content,
-      .basser-content {
         .singer-profiles {
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+
           .singer-profile {
+            width: 100%;
+
             img {
-              height: 300px;
+              width: 80%;
+              height: 100%;
+            }
+
+            h4 {
+              font-size: 1.15rem;
+              margin-top: 15px;
+            }½
+
+            p {
+              font-size: 0.95rem;
             }
           }
         }

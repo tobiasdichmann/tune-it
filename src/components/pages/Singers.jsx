@@ -63,7 +63,7 @@ const Singers = () => {
       <header>
         <img src={SingersBanner} className="banner" alt="Billede af Tune It" />
 
-
+        <h1 className="hero-title">Sangere</h1>
 
         <a href="#singersSection" className="arrow-down">
           <FaArrowDown />
