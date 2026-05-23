@@ -53,7 +53,7 @@ const Book = () => {
       <header>
         <img src={BookBanner} className="banner" alt="Billede af Tune It" />
 
-
+        <h1 className="hero-title">Book Os</h1>
 
         <a href="#bookSection" className="arrow-down">
           <FaArrowDown />
@@ -81,47 +81,58 @@ const Book = () => {
       </header>
 
       <main id="bookSection">
-        <div className="book-content">
-          <img
-            src={BookImg}
-            alt="Billede af Tune It til Randers Business Award"
-          />
+        <div className="book-grid">
+          <div className="book-left-column">
+            <section className="book-intro">
+              <h3>Book Tune It til jeres næste arrangement:</h3>
+              <p>
+                Vi har sunget alle mulige forskellige ting til alle mulige
+                forskellige typer arrangementer i Randers og omegn, fra
+                firmafesten til awardshowet, og fra kirkerum til Værkets foyer.
+                Vores repertoire er bredt, interessant og vidtrækkende... vi har
+                endnu ikke oplevet et arrangement, vi ikke kunne levere et
+                passende sæt til. Skriv til os og spørg!
+              </p>
+            </section>
 
-          <div className="book-txt">
-            <h3>Book Tune It til jeres næste arrangement:</h3>
+            <section className="book-prices">
+              <h3>Vejledende priser:</h3>
 
-            <p>
-              Vi har sunget alle mulige forskellige ting til alle mulige
-              forskellige typer arrangementer i Randers og omegn, fra
-              firmafesten til awardshowet, og fra kirkerum til Værkets foyer.
-              Vores repertoire er bredt, interessant og vidtrækkende... vi har
-              endnu ikke oplevet et arrangement, vi ikke kunne levere et
-              passende sæt til. Skriv til os og spørg! <br />
-              <a href="mailto:susan@tune-it.dk">susan@tune-it.dk</a>
-            </p>
+              <div className="price-table">
+                <div className="price-row">
+                  <span className="price-label">15 min:</span>
+                  <span className="price-value">3.000,-</span>
+                </div>
+                <div className="price-row">
+                  <span className="price-label">30 min:</span>
+                  <span className="price-value">5.000,-</span>
+                </div>
+                <div className="price-row">
+                  <span className="price-label">1 time:</span>
+                  <span className="price-value">8.000,-</span>
+                </div>
+              </div>
+
+              <p className="price-disclaimer">
+                Afstand, tidspunkt, særønsker osv. kan have indflydelse. <br />
+                Skriv gerne til os omkring dit arrangement eller for at få en snak!
+              </p>
+
+              <div className="btn-container">
+                <a href="mailto:susan@tune-it.dk" className="book-btn" title="susan@tune-it.dk">
+                  Send os en forespørgsel
+                </a>
+              </div>
+            </section>
           </div>
-        </div>
 
-        <div className="prices">
-          <h3>Vejledende priser:</h3>
-
-          <div>
-            <p>
-              15 min: <br />
-              30 min: <br />1 time:
-            </p>
-
-            <p>
-              3.000,- <br />
-              5.000,- <br />
-              8.000,-
-            </p>
+          <div className="book-right-column">
+            <img
+              src={BookImg}
+              alt="Billede af Tune It til Randers Business Award"
+              className="featured-image"
+            />
           </div>
-
-          <p>
-            Afstand, tidspunkt, særønsker osv. kan have indflydelse. <br />
-            Skriv gerne til os omkring dit arrangement eller for at få en snak!
-          </p>
         </div>
       </main>
     </div>

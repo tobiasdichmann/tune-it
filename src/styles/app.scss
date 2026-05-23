@@ -13,21 +13,34 @@
 }
 
 .scroll-to-top {
-  padding: 15px;
-  color: white;
-  background-color: black;
-  font-size: 1.5rem;
+  padding: 12px 30px;
+  color: $color-navy;
+  background-color: $color-gold;
+  font-size: 1.1rem;
+  font-weight: 700;
   border: none;
   outline: none;
-  border-radius: 10px;
+  border-radius: 30px;
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 1;
+  z-index: 10;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
-    background-color: $color-gray-dark;
+    background-color: $color-gold-hover;
+    color: $color-navy;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(197, 168, 107, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
@@ -50,15 +63,17 @@ button {
 @media screen and (max-width: 850px) {
   .scroll-to-top {
     &:hover {
-      background-color: black;
+      background-color: $color-gold;
+      transform: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .scroll-to-top {
-    padding: 10px;
-    font-size: 1.3rem;
-    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
   }
 }
