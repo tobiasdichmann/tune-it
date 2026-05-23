@@ -31,27 +31,27 @@ const Navbar = () => {
         <ul>
           <li>
             <NavLink to="/" onClick={handleLinkClick}>
-              Home
+              Forside
             </NavLink>
           </li>
           <li>
             <NavLink to="/book" onClick={handleLinkClick}>
-              Book
+              Book os
             </NavLink>
           </li>
           <li>
             <NavLink to="/singers" onClick={handleLinkClick}>
-              Singers
+              Sangere
             </NavLink>
           </li>
           <li>
-            <NavLink to="/songs" onClick={handleLinkClick}>
-              Songs
+            <NavLink to="/repertoire" onClick={handleLinkClick}>
+              Repertoire
             </NavLink>
           </li>
           <li>
             <NavLink to="/about" onClick={handleLinkClick}>
-              About
+              Om os
             </NavLink>
           </li>
         </ul>
@@ -69,27 +69,27 @@ const Navbar = () => {
         <ul>
           <li>
             <NavLink to="/" onClick={handleLinkClick}>
-              Home
+              Forside
             </NavLink>
           </li>
           <li>
             <NavLink to="/book" onClick={handleLinkClick}>
-              Book
+              Book os
             </NavLink>
           </li>
           <li>
             <NavLink to="/singers" onClick={handleLinkClick}>
-              Singers
+              Sangere
             </NavLink>
           </li>
           <li>
-            <NavLink to="/songs" onClick={handleLinkClick}>
-              Songs
+            <NavLink to="/repertoire" onClick={handleLinkClick}>
+              Repertoire
             </NavLink>
           </li>
           <li>
             <NavLink to="/about" onClick={handleLinkClick}>
-              About
+              Om os
             </NavLink>
           </li>
         </ul>

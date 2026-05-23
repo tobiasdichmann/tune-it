@@ -8,7 +8,7 @@ import "./styles/header.scss";
 import Home from "./components/pages/Home";
 import Book from "./components/pages/Book";
 import Singers from "./components/pages/Singers";
-import Songs from "./components/pages/Songs";
+import Repertoire from "./components/pages/Repertoire";
 import About from "./components/pages/About";
 
 // COMPONENTS
@@ -19,11 +19,12 @@ function App() {
   return (
     <>
       <Navbar />
+      
       <Routes>
         <Route index element={<Home />} />
         <Route path="/book" element={<Book />} />
         <Route path="/singers" element={<Singers />} />
-        <Route path="/songs" element={<Songs />} />
+        <Route path="/repertoire" element={<Repertoire />} />
         <Route path="/about" element={<About />} />
       </Routes>
 
