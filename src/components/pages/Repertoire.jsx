@@ -78,10 +78,15 @@ const Repertoire = () => {
 
       <header>
         <div className="banner">
-          <ReactCompareImage leftImage={ImgOne} rightImage={ImgTwo} />
+          <ReactCompareImage 
+            leftImage={ImgOne} 
+            rightImage={ImgTwo} 
+            leftImageCss={{ height: "100%", objectFit: "cover" }}
+            rightImageCss={{ height: "100%", objectFit: "cover" }}
+          />
         </div>
 
-
+        <h1 className="hero-title">Vores Repertoire</h1>
 
         <a href="#repertoireLists" className="arrow-down">
           <FaArrowDown />
@@ -109,17 +114,19 @@ const Repertoire = () => {
       </header>
 
       <section id="repertoireLists">
-        <h3>
-          Nuværende Repertoire
-          <a href="#repertoireAudioClips" className="audio-clips-link">
-            <FaMusic className="node-icon" />
-            Hør os her
-          </a>
-        </h3>
+        <h3>Nuværende Repertoire</h3>
+        <a href="#repertoireAudioClips" className="audio-clips-link">
+          <FaMusic className="node-icon" />
+          Hør os her
+        </a>
 
         <div className="list-container">
           <div className="ordinary-list">
             <table>
+              <tr className="table-header-row">
+                <th>Sangtitel</th>
+                <th>Kunstner</th>
+              </tr>
               {/* Take Me Home */}
               <tr>
                 <td>Take Me Home</td>
@@ -219,6 +226,10 @@ const Repertoire = () => {
 
           <div className="xmas-list">
             <table>
+              <tr className="table-header-row">
+                <th>Sangtitel</th>
+                <th>Kunstner</th>
+              </tr>
               {/* The World for Chrismas */}
               <tr>
                 <td>The World for Chrismas</td>

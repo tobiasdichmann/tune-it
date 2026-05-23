@@ -25,6 +25,11 @@ header {
 
     grid-column: 1/-1;
     grid-row: 1/-1;
+
+    // Enforce full-height scaling for ReactCompareImage nested inside wrapper div
+    & > div {
+      height: 100% !important;
+    }
   }
 
   .hero-title {
