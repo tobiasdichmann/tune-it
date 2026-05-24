@@ -98,20 +98,22 @@ const Book = () => {
             <section className="book-prices">
               <h3>Vejledende priser:</h3>
 
-              <div className="price-table">
-                <div className="price-row">
-                  <span className="price-label">15 min:</span>
-                  <span className="price-value">3.000,-</span>
-                </div>
-                <div className="price-row">
-                  <span className="price-label">30 min:</span>
-                  <span className="price-value">5.000,-</span>
-                </div>
-                <div className="price-row">
-                  <span className="price-label">1 time:</span>
-                  <span className="price-value">8.000,-</span>
-                </div>
-              </div>
+              <table className="price-table">
+                <tbody>
+                  <tr className="price-row">
+                    <td className="price-label">15 min:</td>
+                    <td className="price-value">3.000,-</td>
+                  </tr>
+                  <tr className="price-row">
+                    <td className="price-label">30 min:</td>
+                    <td className="price-value">5.000,-</td>
+                  </tr>
+                  <tr className="price-row">
+                    <td className="price-label">1 time:</td>
+                    <td className="price-value">8.000,-</td>
+                  </tr>
+                </tbody>
+              </table>
 
               <p className="price-disclaimer">
                 Afstand, tidspunkt, særønsker osv. kan have indflydelse. <br />

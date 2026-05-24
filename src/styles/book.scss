@@ -92,27 +92,28 @@
       }
 
       .price-table {
+        width: 100%;
         max-width: 550px;
-        display: flex;
-        flex-direction: column;
+        border-collapse: collapse;
         margin-bottom: 25px;
 
         .price-row {
-          display: flex;
-          justify-content: space-between;
-          padding: 16px 0;
           border-bottom: 1.5px solid rgba($color-gold, 0.4);
 
           .price-label {
+            padding: 16px 0;
             font-size: 1.25rem;
             font-weight: 500;
             color: $color-text-dark;
+            text-align: left;
           }
 
           .price-value {
+            padding: 16px 0;
             font-size: 1.25rem;
             font-weight: 700;
             color: $color-text-dark;
+            text-align: right;
           }
         }
       }
@@ -275,10 +276,9 @@
 
         .price-table {
           .price-row {
-            padding: 12px 0;
-            
             .price-label,
             .price-value {
+              padding: 12px 0;
               font-size: 1.1rem;
             }
           }
