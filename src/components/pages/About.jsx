@@ -54,9 +54,7 @@ const About = () => {
 
       <header>
         <img src={AboutBanner} className="banner" alt="Billede af Tune It" />
-
-
-
+        <h1 className="hero-title">Tune It</h1>
         <a href="#aboutSection" className="arrow-down">
           <FaArrowDown />
         </a>
@@ -99,12 +97,16 @@ const About = () => {
             BaSiX er til stor inspiration for os.
           </p>
 
-          <img src={AboutContentOne} alt="Billede af Tune It" />
+          <div className="image-wrapper">
+            <img src={AboutContentOne} alt="Billede af Tune It" />
+          </div>
         </div>
 
         {/* Del 2: Fokus på publikum og den gode koncertoplevelse */}
         <div className="about-content-two">
-          <img src={AboutContentTwo} alt="Billede af Tune It" />
+          <div className="image-wrapper">
+            <img src={AboutContentTwo} alt="Billede af Tune It" />
+          </div>
 
           <p>
             Tune It vil give publikum den engagerende koncertoplevelse, så vi
@@ -133,7 +135,9 @@ const About = () => {
             indslag på musikscenen og til arrangementer i Randers og omegn.
           </p>
 
-          <img src={AboutContentThree} alt="Billede af Tune It" />
+          <div className="image-wrapper">
+            <img src={AboutContentThree} alt="Billede af Tune It" />
+          </div>
         </div>
       </main>
     </div>
