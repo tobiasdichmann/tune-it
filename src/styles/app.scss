@@ -24,7 +24,7 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 10;
+  z-index: 999;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
