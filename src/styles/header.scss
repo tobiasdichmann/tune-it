@@ -1,5 +1,5 @@
-@import './variables/fonts';
-@import './variables/colors';
+@import "./variables/fonts";
+@import "./variables/colors";
 
 header {
   display: grid;
@@ -8,16 +8,16 @@ header {
   overflow: hidden;
 
   &::after {
-    content: '';
+    content: "";
     grid-column: 1/-1;
     grid-row: 1/-1;
-    background-color: rgba($color-navy, 0.40);
+    background-color: rgba($color-navy, 0.4);
     z-index: 0;
     pointer-events: none;
   }
 
   .banner {
-    height: 92vh;
+    height: 92dvh;
     max-height: 100vh;
     width: 100%;
     object-fit: cover;
@@ -213,9 +213,5 @@ header {
       }
     }
 
-    &::after {
-      width: 300px;
-      height: 150px;
-    }
   }
 }
