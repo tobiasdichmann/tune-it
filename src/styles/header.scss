@@ -4,7 +4,7 @@
 header {
   display: grid;
   position: relative;
-  height: calc(100vh - 8vh);
+  height: calc(100dvh - 8dvh);
   overflow: hidden;
 
   &::after {
@@ -18,7 +18,7 @@ header {
 
   .banner {
     height: 92dvh;
-    max-height: 100vh;
+    max-height: 100dvh;
     width: 100%;
     object-fit: cover;
     display: block;
@@ -113,14 +113,14 @@ header {
 
 @media screen and (max-width: 1100px) {
   header {
-    height: calc(100vh - 6.5vh);
+    height: calc(100dvh - 6.5dvh);
 
     .banner {
-      height: 93.5vh;
+      height: 93.5dvh;
     }
 
     .hero-title {
-      top: calc(50vh - 80px);
+      top: calc(50dvh - 80px);
       font-size: 5rem;
     }
 
@@ -174,14 +174,14 @@ header {
 @media screen and (max-width: 600px) {
   header {
     padding: 0;
-    height: calc(100vh - 5.5vh);
+    height: calc(100dvh - 5.5dvh);
 
     .banner {
-      height: 94.5vh;
+      height: 94.5dvh;
     }
 
     .hero-title {
-      top: calc(50vh - 5.5vh);
+      top: calc(50dvh - 5.5dvh);
       font-size: 3.5rem;
     }
 
