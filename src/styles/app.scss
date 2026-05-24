@@ -1,4 +1,4 @@
-@import './variables/colors';
+@import "./variables/colors";
 
 * {
   padding: 0;
@@ -71,6 +71,10 @@ button {
 }
 
 @media screen and (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+
   .scroll-to-top {
     padding: 10px 24px;
     font-size: 1rem;
