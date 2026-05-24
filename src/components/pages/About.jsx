@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/about.scss";
 
-
 // IMAGES
 import AboutBanner from "../../assets/img/ordinary/ordinary_mur_forefra.jpg";
 import AboutContentOne from "../../assets/img/ordinary/ordinary_bagtæppe_peg.jpg";
@@ -37,15 +36,11 @@ const About = () => {
 
   window.addEventListener("scroll", toggleVisible);
 
-
-
-
-
   return (
-    <div id="about">
+    <div id='about'>
       {/* Scroll-To-Top */}
       <button
-        className="scroll-to-top"
+        className='scroll-to-top'
         onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none" }}
       >
@@ -53,36 +48,36 @@ const About = () => {
       </button>
 
       <header>
-        <img src={AboutBanner} className="banner" alt="Billede af Tune It" />
-        <h1 className="hero-title">Tune It</h1>
-        <a href="#aboutSection" className="arrow-down">
+        <img src={AboutBanner} className='banner' alt='Billede af Tune It' />
+        <h1 className='hero-title'>Hvem er vi?</h1>
+        <a href='#aboutSection' className='arrow-down'>
           <FaArrowDown />
         </a>
 
-        <div className="socials">
+        <div className='socials'>
           <a
-            href="https://www.instagram.com/tune_it_randers/?hl=da"
-            title="@tune_it_randers"
-            target="_blank"
-            rel="noreferrer"
+            href='https://www.instagram.com/tune_it_randers/?hl=da'
+            title='@tune_it_randers'
+            target='_blank'
+            rel='noreferrer'
           >
             <FaInstagram />
           </a>
 
           <a
-            href="https://www.facebook.com/tuneit?locale=da_DK"
-            title="Tune It"
-            target="_blank"
-            rel="noreferrer"
+            href='https://www.facebook.com/tuneit?locale=da_DK'
+            title='Tune It'
+            target='_blank'
+            rel='noreferrer'
           >
             <FaFacebookF />
           </a>
         </div>
       </header>
 
-      <main id="aboutSection">
+      <main id='aboutSection'>
         {/* Del 1: Om Tune It og deres unikke koncept */}
-        <div className="about-content-one">
+        <div className='about-content-one'>
           <p>
             Tune It er et vokalensemble fra Randers, der blev dannet i år 2000.
             De fleste medlemmer havde sunget sammen forskellige steder i lang
@@ -97,15 +92,15 @@ const About = () => {
             BaSiX er til stor inspiration for os.
           </p>
 
-          <div className="image-wrapper">
-            <img src={AboutContentOne} alt="Billede af Tune It" />
+          <div className='image-wrapper'>
+            <img src={AboutContentOne} alt='Billede af Tune It' />
           </div>
         </div>
 
         {/* Del 2: Fokus på publikum og den gode koncertoplevelse */}
-        <div className="about-content-two">
-          <div className="image-wrapper">
-            <img src={AboutContentTwo} alt="Billede af Tune It" />
+        <div className='about-content-two'>
+          <div className='image-wrapper'>
+            <img src={AboutContentTwo} alt='Billede af Tune It' />
           </div>
 
           <p>
@@ -122,7 +117,7 @@ const About = () => {
         </div>
 
         {/* Del 3: Arbejdsglæde, julesange og motto */}
-        <div className="about-content-three">
+        <div className='about-content-three'>
           <p>
             Tune It lægger stor vægt på at have det sjovt sammen. Vores motto,
             "Vi synger for at have det sjovt - men det er ikke rigtig sjovt,
@@ -135,8 +130,8 @@ const About = () => {
             indslag på musikscenen og til arrangementer i Randers og omegn.
           </p>
 
-          <div className="image-wrapper">
-            <img src={AboutContentThree} alt="Billede af Tune It" />
+          <div className='image-wrapper'>
+            <img src={AboutContentThree} alt='Billede af Tune It' />
           </div>
         </div>
       </main>
