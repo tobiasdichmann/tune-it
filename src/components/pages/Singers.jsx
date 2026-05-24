@@ -5,9 +5,8 @@ import "../../styles/singers.scss";
 // IMAGES
 import SingersBanner from "../../assets/img/ordinary/ordinary_stole.jpg";
 //-------
-import Vibeke from "../../assets/img/profiles/vibeke.png";
-import Marlene from "../../assets/img/profiles/marlene.png";
 import Louise from "../../assets/img/profiles/louise.png";
+import NoProfile from "../../assets/img/profiles/no_profile.png";
 import Silje from "../../assets/img/profiles/silje.png";
 import Susan from "../../assets/img/profiles/susan.png";
 import Moes from "../../assets/img/profiles/moes.png";
@@ -95,18 +94,18 @@ const Singers = () => {
           <h3>Sopraner</h3>
 
           <div className="singer-profiles">
-            {/* Vibeke Bonde Persson */}
+            {/* Benna */}
             <div className="singer-profile">
-              <h4>Vibeke Bonde Persson</h4>
+              <h4>Benna</h4>
               <p>1. Sopran</p>
-              <img src={Vibeke} alt="Billede af Vibeke Bonde Persson" />
+              <img src={NoProfile} alt="Billede af Benna" />
             </div>
 
-            {/* Marlene Lillebæk */}
+            {/* Lene */}
             <div className="singer-profile">
-              <h4>Marlene Lillebæk</h4>
+              <h4>Lene</h4>
               <p>1. Sopran</p>
-              <img src={Marlene} alt="Billede af Marlene Lillebæk" />
+              <img src={NoProfile} alt="Billede af Lene" />
             </div>
 
             {/* Louise Raaschou Andersen */}

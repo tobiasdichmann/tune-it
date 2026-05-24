@@ -1,5 +1,5 @@
-@import './variables/fonts';
-@import './variables/colors';
+@import "./variables/fonts";
+@import "./variables/colors";
 
 #singers {
   display: flex;
@@ -39,13 +39,13 @@
 
     // Faint diagonal sheet music background on the right side
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 15%;
       right: -100px;
       width: 700px;
       height: 700px;
-      background-image: url('../assets/img/my_baby_sheet_music.png');
+      background-image: url("../assets/img/my_baby_sheet_music.png");
       background-size: contain;
       background-repeat: no-repeat;
       opacity: 0.08;
@@ -56,13 +56,13 @@
 
     // Second faint sheet music background on the left side near the bottom
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 5%;
       left: -150px;
       width: 650px;
       height: 650px;
-      background-image: url('../assets/img/pass_me_jazz_sheet.png');
+      background-image: url("../assets/img/pass_me_jazz_sheet.png");
       background-size: contain;
       background-repeat: no-repeat;
       opacity: 0.14;
@@ -88,7 +88,7 @@
         margin-bottom: 50px;
 
         &::after {
-          content: '';
+          content: "";
           display: block;
           width: 50px;
           height: 2px;
@@ -121,7 +121,10 @@
             border-radius: 16px;
             border: 2px solid $color-gold;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+            background-color: $color-cream;
+            transition:
+              transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.4s ease;
 
             &:hover {
               transform: translateY(-6px);
@@ -202,7 +205,7 @@
         font-size: 5rem;
       }
     }
-    
+
     #singersSection {
       padding: 80px 20px;
     }
