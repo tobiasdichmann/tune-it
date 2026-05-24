@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../../styles/repertoire.scss";
 import ReactCompareImage from "react-compare-image";
 
-
 // IMAGES
 import ImgOne from "../../assets/img/ordinary/ordinary_bagtæppe_slider.jpg";
 import ImgTwo from "../../assets/img/xmas/xmas_bagtæppe_slider.jpg";
@@ -47,10 +46,6 @@ const Repertoire = () => {
 
   window.addEventListener("scroll", toggleVisible);
 
-
-
-
-
   /* Pausing all other audio elements on a site if you click on a play button, except the one selected */
   document.addEventListener(
     "play",
@@ -62,14 +57,14 @@ const Repertoire = () => {
         }
       }
     },
-    true
+    true,
   );
 
   return (
-    <div id="repertoire">
+    <div id='repertoire'>
       {/* Scroll-To-Top */}
       <button
-        className="scroll-to-top"
+        className='scroll-to-top'
         onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none" }}
       >
@@ -77,53 +72,53 @@ const Repertoire = () => {
       </button>
 
       <header>
-        <div className="banner">
-          <ReactCompareImage 
-            leftImage={ImgOne} 
-            rightImage={ImgTwo} 
+        <div className='banner'>
+          <ReactCompareImage
+            leftImage={ImgOne}
+            rightImage={ImgTwo}
             leftImageCss={{ height: "100%", objectFit: "cover" }}
             rightImageCss={{ height: "100%", objectFit: "cover" }}
           />
         </div>
 
-        <h1 className="hero-title">Vores Repertoire</h1>
+        <h1 className='hero-title'>Vores Repertoire</h1>
 
-        <a href="#repertoireLists" className="arrow-down">
+        <a href='#repertoireLists' className='arrow-down'>
           <FaArrowDown />
         </a>
 
-        <div className="socials">
+        <div className='socials'>
           <a
-            href="https://www.instagram.com/tune_it_randers/?hl=da"
-            title="@tune_it_randers"
-            target="_blank"
-            rel="noreferrer"
+            href='https://www.instagram.com/tune_it_randers/?hl=da'
+            title='@tune_it_randers'
+            target='_blank'
+            rel='noreferrer'
           >
             <FaInstagram />
           </a>
 
           <a
-            href="https://www.facebook.com/tuneit?locale=da_DK"
-            title="Tune It"
-            target="_blank"
-            rel="noreferrer"
+            href='https://www.facebook.com/tuneit?locale=da_DK'
+            title='Tune It'
+            target='_blank'
+            rel='noreferrer'
           >
             <FaFacebookF />
           </a>
         </div>
       </header>
 
-      <section id="repertoireLists">
+      <section id='repertoireLists'>
         <h3>Nuværende Repertoire</h3>
-        <a href="#repertoireAudioClips" className="audio-clips-link">
-          <FaMusic className="node-icon" />
+        <a href='#repertoireAudioClips' className='audio-clips-link'>
+          <FaMusic className='node-icon' />
           Hør os her
         </a>
 
-        <div className="list-container">
-          <div className="ordinary-list">
+        <div className='list-container'>
+          <div className='ordinary-list'>
             <table>
-              <tr className="table-header-row">
+              <tr className='table-header-row'>
                 <th>Sangtitel</th>
                 <th>Kunstner</th>
               </tr>
@@ -224,9 +219,9 @@ const Repertoire = () => {
             </table>
           </div>
 
-          <div className="xmas-list">
+          <div className='xmas-list'>
             <table>
-              <tr className="table-header-row">
+              <tr className='table-header-row'>
                 <th>Sangtitel</th>
                 <th>Kunstner</th>
               </tr>
@@ -306,17 +301,17 @@ const Repertoire = () => {
         </div>
       </section>
 
-      <main id="repertoireAudioClips">
+      <main id='repertoireAudioClips'>
         {/* Ja Da Ja Da Jing Jing Jing / Big Bad World */}
-        <div className="audio-container audio-container-one">
-          <div className="audio-clips">
+        <div className='audio-container audio-container-one'>
+          <div className='audio-clips'>
             {/* Ja Da Ja Da Jing Jing Jing, B. Carleton */}
             <div>
               <h3>Ja Da Ja Da Jing Jing Jing</h3>
               <p>B. Carleton</p>
 
               <audio controls>
-                <source src={JDJDJJJ} type="audio/mpeg" />
+                <source src={JDJDJJJ} type='audio/mpeg' />
                 Your browser does not support the audio tag.
               </audio>
             </div>
@@ -327,27 +322,27 @@ const Repertoire = () => {
               <p>The Real Group</p>
 
               <audio controls>
-                <source src={BBW} type="audio/mpeg" />
+                <source src={BBW} type='audio/mpeg' />
                 Your browser does not support the audio tag.
               </audio>
             </div>
           </div>
 
-          <img src={AudioImgOne} alt="Billede af Tune It" />
+          <img src={AudioImgOne} alt='Billede af Tune It' />
         </div>
 
         {/* The World for Chrismas / I Saw Mommy Kissing Santa Claus */}
-        <div className="audio-container audio-container-two">
-          <img src={AudioImgTwo} alt="Billede af Tune It" />
+        <div className='audio-container audio-container-two'>
+          <img src={AudioImgTwo} alt='Billede af Tune It' />
 
-          <div className="audio-clips">
+          <div className='audio-clips'>
             {/* The World for Chrismas, The Real Group */}
             <div>
               <h3>The World for Chrismas</h3>
               <p>The Real Group</p>
 
               <audio controls>
-                <source src={TWFC} type="audio/mpeg" />
+                <source src={TWFC} type='audio/mpeg' />
                 Your browser does not support the audio tag.
               </audio>
             </div>
@@ -358,7 +353,7 @@ const Repertoire = () => {
               <p>Tommie Connor</p>
 
               <audio controls>
-                <source src={ISMKSC} type="audio/mpeg" />
+                <source src={ISMKSC} type='audio/mpeg' />
                 Your browser does not support the audio tag.
               </audio>
             </div>
@@ -366,21 +361,21 @@ const Repertoire = () => {
         </div>
 
         {/* The Christmas Song */}
-        <div className="audio-container audio-container-one">
-          <div className="audio-clips">
+        <div className='audio-container audio-container-one'>
+          <div className='audio-clips'>
             {/* The Christmas Song, Mel Torme / Robert Wells */}
             <div>
               <h3>The Christmas Song</h3>
               <p>Mel Torme / Robert Wells</p>
 
               <audio controls>
-                <source src={TCS} type="audio/mpeg" />
+                <source src={TCS} type='audio/mpeg' />
                 Your browser does not support the audio tag.
               </audio>
             </div>
           </div>
 
-          <img src={AudioImgThree} alt="Billede af Tune It" />
+          <img src={AudioImgThree} alt='Billede af Tune It' />
         </div>
       </main>
     </div>
